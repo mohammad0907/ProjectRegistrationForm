@@ -1,0 +1,155 @@
+body{
+    margin : 0;
+    padding: 0;
+    background-color:whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+
+}
+
+
+#mainContainer{
+    width : 100%;
+    
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+  
+    
+}
+
+#formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+   
+    background-color: white;
+    align-items: center;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75); 
+}
+
+#registerForms{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+#umID > input[type=text], select {
+    width: 48%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #name > input[type=text], select {
+    width: 48%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #projectTitle > input[type=text], select {
+    width: 96.7%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #email > input[type=text], select {
+    width: 96.7%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #phone > input[type=text], select {
+    width: 48%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #slots{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #registerButton{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  }
+
+  .button {
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid #555555;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+      
+    background-color: #555555;
+    color: white;
+    }
+
+    #info{
+      width: 80%;
+      
+       
+       border-radius: 5px;
+    }
+    #error{
+      background-color: #F8D7DA;
+      border-radius: 5px;
+     
+    }
+    #success{
+      background-color: #D4EDDA;
+      border-radius: 5px;
+      
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet"  href = "./stylesheet.css">
+    <title></title>
+
+</head>
+<body>
+
+    <div id = "mainContainer">
+        <div id = "formContainer">
+            <form id = "registerForms">
+                <div id = "umID" >
+                    <input type = "text" name = "umdID" placeholder="UMID">
+                </div>
+                <div id = "name" >
+                        <input type = "text" name = "fName" placeholder="First Name">
+                        <input type = "text" name = "lName" placeholder="Last Name">
+                </div>
+                <div id = "projectTitle" >
+                        <input type = "text" name = "title" placeholder="Project Title">
+                </div>
+                <div id = "email" >
+                        <input type = "text" name = "email" placeholder="Email">
+                </div>
+                <div id = "phone" >
+                        <input type = "text" name = "phone" placeholder="Phone">
+                </div>
+
+                <div id = slots>
+
+                        <div>
+                            <input type="radio" name="timeSlots" value="1">1. 12/9/19, 6:00 PM - 7:00 PM,  seats remaining
+                        </div>   
+                        
+                        <div>
+                            <input type="radio" name="timeSlots" value="2">2. 12/9/19, 7:00 PM - 8:00 PM, 5 seats remaining
+                        </div> 
+                        
+                        <div>
+                            <input type="radio" name="timeSlots" value="3">3. 12/9/19, 8:00 PM - 9:00 PM, 3 seats remaining
+                        </div> 
+                        
+                        <div>
+                            <input type="radio" name="timeSlots" value="4">4. 12/10/19, 6:00 PM - 7:00 PM, 2 seats remaining
+                        </div> 
+                        
+                        <div>
+                            <input type="radio" name="timeSlots" value="5">5. 12/10/19, 7:00 PM - 8:00 PM, 4 seats remaining
+                        </div> 
+                    
+                        <div>
+                            <input type="radio" name="timeSlots" value="6">6. 12/10/19, 8:00 PM - 9:00 PM, 0 seats remaining
+                        </div> 
+                    
+                   
+    
+                    </div>
+
+                    <div id = "registerButton">
+                         <button class="button" type = "submit" >Register</button>
+                    </div>
+
+            </form>
+
+            
+
+            <div id = "registerButton">
+                    <button class="button" type = "submit" onclick="changeView()" ></button>
+               </div>
+
+
+        </div>
+    
+    </div>
+    
+    
+
+
+
+
+
+
+
+    <script type = "text/javascript"> 
+        
+       document.getElementById("mainContainer").style.height = window.innerHeight.toString() + "px";
+       document.getElementsByClassName("button")[1].innerHTML = "Change Time Slots"
+       let register = false;
+       document.getElementById("mainContainer").style.backgroundColor
+       function changeView(){
+           if(register){
+            document.getElementsByClassName("button")[1].innerHTML = "Change Time Slots"
+            document.getElementById("registerForms").style.display = "flex"
+            
+           }else{
+            document.getElementsByClassName("button")[1].innerHTML = "Register For Slots"
+            document.getElementById("registerForms").style.display = "none"
+           }
+
+           register = !register
+       }
+              
+    </script>
+
+</body>
+</html>
