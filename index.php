@@ -145,7 +145,8 @@ $mySqlError = "";
     }  
     
     if(!empty($_POST['updateCancelButton'])){
-        header("Refresh: 0;");
+        $success = "Updates Canceled.";
+        header("Refresh: 5;");
     }
 
     
@@ -199,78 +200,90 @@ $mySqlError = "";
 <body>
 
     <div id = "mainContainer">
+        
         <div id = "formContainer">
-            <div id = "info">
-                <ul id = "error">
-                    <?php echo $error; ?>
-                </ul>
 
-                <ul id = "success">
-                     <?php echo $success; ?>
-                </ul>
-                
-                    
+        <div id = "picture">
             
+        </div>
+            <div id = "formElements">
+                <div style = "display: flex; width: 100%; justify-content: center; color: #072B5F; margin-bottom: 5px;">
+                    <span style = "font-size: 35px">Project Registration</span>
+                </div>
+                <div id = "info">
+                    <ul id = "error">
+                        <?php echo $error; ?>
+                    </ul>
+
+                    <ul id = "success">
+                        <?php echo $success; ?>
+                    </ul>
+                    
+                        
+                
+
+                </div>
+                <form id = "registerForms" method = "post" name = "reg">
+                        <div style = "display: flex;"> 
+                            <?php echo $update; echo $cancelUpdate; ?> 
+                        </div> 
+                        
+                    <div id = "umID" >
+                        <input type = "text" name = "umID" placeholder="UMID" value = '<?php echo $umID; ?>'  required>
+                    </div>
+                    <div id = "name" >
+                            <input type = "text" name = "fName" placeholder="First Name" value = '<?php echo $fName; ?>' required >
+                            <input type = "text" name = "lName" placeholder="Last Name" value = '<?php echo $lName; ?>' required>
+                    </div>
+                    <div id = "projectTitle" >
+                            <input type = "text" name = "title" placeholder="Project Title" value = '<?php echo $title; ?>' required>
+                    </div>
+                    <div id = "email" >
+                            <input type = "text" name = "email" placeholder="Email" value = '<?php echo $email; ?>' required>
+                    </div>
+                    <div id = "phone" >
+                            <input type = "text" name = "phone" placeholder="Phone: 000-000-0000" value = '<?php echo $phone; ?>' required>
+                    </div>
+
+                    <div id = slots>
+
+                            <div>
+                                <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 1 ) echo "checked";?>  value="1" required> <span class = "timeSlotTExt">1. 12/9/19, 6:00 PM - 7:00 PM,</span>  
+                            </div>   
+                            
+                            <div>
+                                <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 2 ) echo "checked";?> value="2"> <span class = "timeSlotTExt">2. 12/9/19, 7:00 PM - 8:00 PM,</span>  
+                            </div> 
+                            
+                            <div>
+                                <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 3 ) echo "checked";?> value="3"> <span class = "timeSlotTExt" >3. 12/9/19, 8:00 PM - 9:00 PM,</span>  
+                            </div> 
+                            
+                            <div>
+                                <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 4 ) echo "checked";?> value="4"> <span class = "timeSlotTExt" >4. 12/10/19, 6:00 PM - 7:00 PM,</span>  
+                            </div> 
+                            
+                            <div>
+                                <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 5 ) echo "checked";?> value="5"> <span class = "timeSlotTExt">5. 12/10/19, 7:00 PM - 8:00 PM, </span> 
+                            </div> 
+                        
+                            <div>
+                                <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 6 ) echo "checked";?> value="6"> <span class ="timeSlotTExt">6. 12/10/19, 8:00 PM - 9:00 PM,</span>  
+                            </div> 
+                        
+                    
+        
+                        </div>
+
+                        <div id = "registerButton">
+                            <input class="button" type = "submit" name = "register-form" value = "Register" />
+                        </div>
+                        
+
+                </form>
 
             </div>
-            <form id = "registerForms" method = "post" name = "reg">
-                    <div style = "display: flex;"> 
-                        <?php echo $update; echo $cancelUpdate; ?> 
-                    </div> 
-                     
-                <div id = "umID" >
-                    <input type = "text" name = "umID" placeholder="UMID" value = '<?php echo $umID; ?>'  required>
-                </div>
-                <div id = "name" >
-                        <input type = "text" name = "fName" placeholder="First Name" value = '<?php echo $fName; ?>' required >
-                        <input type = "text" name = "lName" placeholder="Last Name" value = '<?php echo $lName; ?>' required>
-                </div>
-                <div id = "projectTitle" >
-                        <input type = "text" name = "title" placeholder="Project Title" value = '<?php echo $title; ?>' required>
-                </div>
-                <div id = "email" >
-                        <input type = "text" name = "email" placeholder="Email" value = '<?php echo $email; ?>' required>
-                </div>
-                <div id = "phone" >
-                        <input type = "text" name = "phone" placeholder="Phone: 000-000-0000" value = '<?php echo $phone; ?>' required>
-                </div>
-
-                <div id = slots>
-
-                        <div>
-                            <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 1 ) echo "checked";?>  value="1" required> <span class = "timeSlotTExt">1. 12/9/19, 6:00 PM - 7:00 PM,</span>  
-                        </div>   
-                        
-                        <div>
-                            <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 2 ) echo "checked";?> value="2"> <span class = "timeSlotTExt">2. 12/9/19, 7:00 PM - 8:00 PM,</span>  
-                        </div> 
-                        
-                        <div>
-                            <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 3 ) echo "checked";?> value="3"> <span class = "timeSlotTExt" >3. 12/9/19, 8:00 PM - 9:00 PM,</span>  
-                        </div> 
-                        
-                        <div>
-                            <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 4 ) echo "checked";?> value="4"> <span class = "timeSlotTExt" >4. 12/10/19, 6:00 PM - 7:00 PM,</span>  
-                        </div> 
-                        
-                        <div>
-                            <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 5 ) echo "checked";?> value="5"> <span class = "timeSlotTExt">5. 12/10/19, 7:00 PM - 8:00 PM, </span> 
-                        </div> 
-                    
-                        <div>
-                            <input type="radio" name="timeSlots" <?php if (isset($slots) && $slots== 6 ) echo "checked";?> value="6"> <span class ="timeSlotTExt">6. 12/10/19, 8:00 PM - 9:00 PM,</span>  
-                        </div> 
-                    
-                   
-    
-                    </div>
-
-                    <div id = "registerButton">
-                         <input class="button" type = "submit" name = "register-form" value = "Register" />
-                    </div>
-                    
-
-            </form>
+           
 
             
             
@@ -292,22 +305,8 @@ $mySqlError = "";
     <script type = "text/javascript"> 
         
        document.getElementById("mainContainer").style.height = window.innerHeight.toString() + "px";
-      // document.getElementsByClassName("button")[1].innerHTML = "Change Time Slots"
-       let register = false;
-       
-
-       function changeView(){
-           if(register){
-            document.getElementsByClassName("button")[1].innerHTML = "Change Time Slots"
-            document.getElementById("registerForms").style.display = "flex"
-            
-           }else{
-            document.getElementsByClassName("button")[1].innerHTML = "Register For Slots"
-            document.getElementById("registerForms").style.display = "none"
-           }
-
-           register = !register
-       }
+     
+     
 
        let slots = <?php echo json_encode($recievedSlots) ?>;
        console.log(slots);

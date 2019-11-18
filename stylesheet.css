@@ -1,7 +1,7 @@
 body{
     margin : 0;
     padding: 0;
-    background-color:whitesmoke;
+   
     font-family: 'Roboto Condensed', sans-serif;
     
 
@@ -11,7 +11,7 @@ body{
 #mainContainer{
     width : 100%;
     
-    background-color:whitesmoke;
+    background-color:#072B5F;
     display: flex;
     justify-content: center;
     align-items:  center;
@@ -20,17 +20,39 @@ body{
 }
 
 #formContainer{
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  -webkit-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75); 
+   
+
+}
+
+#formElements{
     display: flex;
     flex-direction: column;
     width: 70%;
-   
-    background-color: white;
+    height: 690px;
+    background-color:#F6D23C;
     align-items: center;
+    justify-content: center;
     padding: 10px;
-    -webkit-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75); 
 }
+
+#picture{
+  width: 40%;
+  height: 525.2;
+  background-image: url("./backg.jpg");
+  background-size: cover;
+  
+  
+}
+
+
+
+
 
 #registerForms{
     display: flex;
@@ -44,7 +66,7 @@ body{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #072B5F;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -54,7 +76,7 @@ body{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #072B5F;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -63,7 +85,7 @@ body{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #072B5F;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -73,7 +95,7 @@ body{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #072B5F;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -83,7 +105,7 @@ body{
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #072B5F;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -104,7 +126,8 @@ body{
   .button {
     background-color: whitesmoke;
     color: black;
-    border: 2px solid #555555;
+    border: 2px solid #072B5F;
+    border-radius: 4px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -118,7 +141,7 @@ body{
 
   .button:hover {
       
-    background-color: #555555;
+    background-color: #072B5F;
     color: white;
     }
 

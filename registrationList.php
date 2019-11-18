@@ -38,9 +38,10 @@
         #mainContainer{
             width : 100%;
             
-            background-color:whitesmoke;
+            background-color: #072B5F;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            
             align-items:  center;
             
         }
@@ -49,8 +50,8 @@
             display: flex;
             flex-direction: column;
           
-        
-            background-color: white;
+            
+            background-color:#F6D23C;
             align-items: center;
             padding: 10px;
             -webkit-box-shadow: 2px 2px 25px -3px rgba(0,0,0,0.75);
@@ -67,7 +68,7 @@
         padding: 8px;
         }
 
-        tr:nth-child(even) {background-color: #f2f2f2;}
+        tr:nth-child(even) { background-color: #072B5F; color: white;}
 
 
     </style>
@@ -76,6 +77,7 @@
 <body>
 
     <div id = "mainContainer">
+        <h1 style = "margin-top: 60px; color: white;">Registration List</h1>
         <div id = "tableContainer">
            
              <div style="overflow-x:auto;">
@@ -115,7 +117,7 @@
 
     <script type = "text/javascript"> 
         
-       document.getElementById("mainContainer").style.height = window.innerHeight.toString() + "px";
+      document.getElementById("mainContainer").style.height = window.innerHeight.toString() + "px";
       // document.getElementsByClassName("button")[1].innerHTML = "Change Time Slots"
       let tableRow = <?php echo json_encode($recievedTable) ?>;
       console.log(tableRow);
